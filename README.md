@@ -2,26 +2,38 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
-## Development server
+# HomePage
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![HomePage](Screenshots/HomePage.png)
 
-## Code scaffolding
+Infinite Scrolling to view the videos, 2 dropdown menus (1 with side transition and 1 with just overlay), fireAuth to sign in via google and clickable video to go to video-details
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Video Details
 
-## Build
+![VideoDetails](Screenshots/Video-Details.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Playable video taken from videoUrl in Firestore database, lists for the next video to watch, CRUD for comment section and add the current video to your playlist
 
-## Running unit tests
+# Video Categories and Search
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![CategoriesAndSearch](Screenshots/Categories&Search.png)
 
-## Running end-to-end tests
+Search the video with the desired categories(music, food, gaming), search the video you want from the list of videos stored in the database
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Insert New Video
 
-## Further help
+![InsertVideo](Screenshots/Insert-Video.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Insert new video to the database, uploaded video and thumbnail will be stored in firestore
+
+# User Channel Video
+
+![User-Video](Screenshots/User-Video.png)
+
+Display all the videos uploaded by the user, user can choose to update or delete the videos
+
+# User Playlist
+
+![UserPLaylist](Screenshots/User-Playlist.png)
+
+Display the list of videos inside a playlist made by the user

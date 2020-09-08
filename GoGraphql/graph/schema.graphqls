@@ -1,0 +1,121 @@
+scalar Time
+
+type Video {
+  id: ID!
+  category: String!
+  title: String!
+  description: String!
+  ageRestriction: String!
+  viewCount: Int!
+  uploadDate: Time!
+  userId: Int!
+  video: String!
+  thumbnail: String!
+  likes: Int!
+  dislikes: Int!
+  private: String!
+}
+
+input newVideo {
+  category: String!
+  title: String!
+  description: String!
+  ageRestriction: String!
+  viewCount: Int!
+  uploadDate: Time!
+  userId: Int!
+  video: String!
+  thumbnail: String!
+  likes: Int!
+  dislikes: Int!
+  private: String!
+}
+
+input updateVideo{
+  category: String!
+  title: String!
+  description: String!
+  ageRestriction: String!
+  private: String!
+}
+
+type User {
+  id: ID!
+  name: String!
+  totalView: Int!
+  premiumMember: Boolean!
+  joinDate: Time!
+  subscriber: Int!
+  image: String!
+}
+
+input newUser {
+  name: String!
+  totalView: Int!
+  premiumMember: Boolean!
+  joinDate: Time!
+  subscriber: Int!
+  image: String!
+}
+
+type Comment {
+  id: ID!
+  description: String!
+  likes: Int!
+  userId: Int!
+  videoId: Int!
+}
+
+input newComment{
+  description: String!
+  likes: Int!
+  userId: Int!
+  videoId: Int!
+}
+
+input updateComment{
+  description: String!
+}
+
+type Playlist{
+  id: ID!
+  userId: Int!
+  videoId: String!
+  name: String!
+}
+
+input newPlaylist{
+  userId: Int!
+  videoId: String!
+  name: String!
+}
+
+input newPlaylistItem{
+  videoId: String!
+}
+
+type Query {
+  videos: [Video!]!
+  getVideo(id:Int!): Video!
+  users: [User!]!
+  getUser(id:Int!): User!
+  comments: [Comment!]!
+  getComment(videoId:Int!): [Comment!]!
+  getTrendingVideosCategory(category:String!): [Video!]!
+  getVideosByUserId(userId:Int!): [Video!]!
+  getVideosByTitle(title: String!): [Video!]!
+  getPlaylist(id:Int!): Playlist!
+  getUserPlaylists(userId: Int!): [Playlist!]!
+}
+
+type Mutation {
+  createVideo(input: newVideo): Video!
+  updateVideo(id: ID!, input: updateVideo): Video!
+  deleteVideo(id: ID!): Boolean!
+  createComment(input: newComment): Comment!
+  updateComment(id: ID!, input: updateComment): Comment!
+  deleteComment(id: ID!): Boolean!
+  createPlaylist(input: newPlaylist): Playlist!
+  addItemToPlaylist(id: ID!, input:newPlaylistItem): Playlist!
+  deletePlaylist(id: ID!): Boolean!
+}

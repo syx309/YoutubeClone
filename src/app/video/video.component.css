@@ -1,0 +1,45 @@
+.content{
+  width: 100%;
+  padding-bottom: 32px;
+  padding-right: 20px;
+}
+
+.content a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.items{
+  width: 100%;
+}
+
+.videoThumbnail{
+  width: 273px;
+  padding-bottom: 10px;
+}
+
+.videoDetails{
+  display: flex;
+  align-items: center;
+  width: 273px;
+  height: 30px;
+  padding-bottom: 10px;
+}
+
+.imageContainer{
+  width:36px;
+  padding-right: 10px;
+}
+
+/* .titleContainer{
+  width: ;
+} */
+
+.channelImage{
+  width: 26px;
+  border-radius: 25px;
+}
+
+.videoDesc{
+  display: flex;
+}

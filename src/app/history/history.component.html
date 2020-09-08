@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="homeBody">
+
+  <ng-template #login>
+    <div class="guest">
+      <div class="logo">
+        <img src="../../assets/cowboy bebop aesthethic.jpg" width="35%">
+      </div>
+      <div clas="title">
+        <h2>Keep track of what you watch</h2>
+      </div>
+      <div class="desc">
+        <h4>Watch history isn't viewable when signed out.</h4>
+      </div>
+      <button class="button button2" (click)="auth.googleSignin()">Sign In</button>
+    </div>
+  </ng-template>
+  <div *ngIf="auth.user$ | async as user; else login">
+
+    <div class="User">
+      <div class="logo">
+        <img src="../../assets/cowboy bebop aesthethic.jpg" width="35%">
+      </div>
+      <div clas="title">
+        <h2>Welcome User, Keep track of your history here</h2>
+      </div>
+      <div class="desc">
+        <h4>You have no history.</h4>
+      </div>
+    </div>
+  </div>
+</div>

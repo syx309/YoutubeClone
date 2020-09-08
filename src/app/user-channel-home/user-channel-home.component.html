@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="content">
+  <div class="profile-background-container">
+    <img src="./../../assets/ae6f6ea6bd00a3159eb077619dbb2942.jpg" width="100%">
+  </div>
+  <div class="nav-bar">
+    <div class="nav-links">
+      <div class="user-info">
+        <div class="user-image">
+          <img src="./../../assets/girl_aesthethic.jpg" width="80px" height="80px" style="border-radius: 40px;">
+        </div>
+        <div class="user-name">
+          Alfred Soegiarto
+        </div>
+      </div>
+      <div class="channel-edit">
+        <button class="customize-channel">
+          Customize Channel
+        </button>
+        <button class="youtube-studio">
+          Youtube Studio
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="link-container">
+      <ul class="nav-links2">
+        <li class="now"><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/home">Home</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/video">Video</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/playlist">Playlist</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel">Channel</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="link-container">
+    <div class="user-uploads">
+      <div *ngFor="let video of videos" [comp]="video">
+        <app-video [vid]="video"></app-video>
+      </div>
+    </div>
+  </div>
+</div>

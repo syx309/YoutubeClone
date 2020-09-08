@@ -1,0 +1,19 @@
+<div class="content">
+  <a routerLink="/details/{{video.id}}">
+    <li class="items">
+      <img src="{{video.thumbnail}}" class="videoThumbnail">
+      <div class="videoDetails">
+        <div class="imageContainer">
+          <img src="../../assets/girl_aesthethic.jpg" class="channelImage">
+        </div>
+        <div class="titleContainer">{{ video.title }}</div>
+      </div>
+      <div>
+        <div class="videoDesc">
+          <span style="padding-right: 30px;">User : {{video.userId}} </span>
+          <span>Views : {{video.viewCount}} </span>
+        </div>
+      </div>
+    </li>
+  </a>
+</div>

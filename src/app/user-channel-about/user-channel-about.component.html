@@ -1,0 +1,52 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="content" *ngIf="auth.user$ | async as user;">
+  <div class="profile-background-container">
+    <img src="./../../assets/ae6f6ea6bd00a3159eb077619dbb2942.jpg" width="100%">
+  </div>
+  <div class="nav-bar">
+    <div class="nav-links">
+      <div class="user-info">
+        <div class="user-image">
+          <img src="./../../assets/girl_aesthethic.jpg" width="80px" height="80px" style="border-radius: 40px;">
+        </div>
+        <div class="user-name">
+          {{user.displayName}}
+        </div>
+      </div>
+      <div class="channel-edit">
+        <button class="customize-channel">
+          Customize Channel
+        </button>
+        <button class="youtube-studio">
+          Youtube Studio
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="nav-bar">
+    <div class="link-container">
+      <ul class="nav-links2">
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/home">Home</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/video">Video</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/playlist">Playlist</a></li>
+        <li><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel">Channel</a></li>
+        <li class="now"><a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="user-content">
+      <div class="user-details">
+        <div class="title">Details</div>
+        <div class="details"><span style="opacity: 70%;">For business inquiries:</span> {{user.email}}</div>
+        <div class="details"><span style="opacity: 70%;">Location:</span> {{user.location}}</div>
+      </div>
+      <div class="user-stats">
+        <div class="title2">Stats</div>
+        <div class="title2">Joined 30 September 2020</div>
+        <div class="title2"><i class="fab fa-font-awesome-flag" style="opacity: 60%; font-size: 25px;"></i></div>
+      </div>
+    </div>
+  </div>
+</div>

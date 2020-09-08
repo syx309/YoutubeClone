@@ -1,0 +1,17 @@
+<div class="content">
+  <li class="items">
+    <a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/playlists/{{playlist.id}}">
+      <img src="../../assets/BikVcLY.jpg" class="playlistThumbnail">
+    </a>
+    <div class="playlistDetails">
+      <div class="titleContainer">{{ playlist.name }}</div>
+    </div>
+    <div>
+      <div class="playlistDesc">
+        <span style="padding-left: 5px;">
+          <button (click)="playlistDetails(playlist.id)">View full playlist here</button>
+        </span>
+      </div>
+    </div>
+  </li>
+</div>

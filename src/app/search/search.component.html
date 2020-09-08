@@ -1,0 +1,19 @@
+<div class="search-bar">
+  <div class="wrap">
+    <form class="search">
+      <input type="text" (keyup)="searching($event)" (click)="toggleSearch()" (clickOutside)="onClickedOutside($event)"
+        class="searchTerm" placeholder="Search..">
+      <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf='showDropDown' class='search-drop-down'>
+  <div *ngFor="let item of videos" class='search-results'>
+    <a routerLink="/details/{{ item.id }}">
+      {{ item.title }}
+    </a>
+  </div>
+</div>

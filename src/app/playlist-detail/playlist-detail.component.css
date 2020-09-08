@@ -1,0 +1,120 @@
+.homeBody{
+  padding-top: 100px;
+  margin-left: 74px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 0;
+  color: white;
+  z-index: 950;
+}
+
+.playlist-stat{
+  width: 36%;
+  position: fixed;
+  top: 60px;
+  background-color: rgb(24, 24, 24);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 300px;
+  z-index: 900;
+}
+
+.playlist-thumbnail{
+  width: 100%;
+  padding-top: 50px;
+}
+
+.playlist-title{
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 15px;
+}
+
+.desc{
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #edebe8;
+  margin-bottom: 10px;
+}
+
+.items{
+  font-size: 14px;
+  opacity: 60%;
+  padding-top: 15px;
+}
+
+.playlist-content{
+  width: 60%;
+  position: relative;
+  background-color: black;
+  left: 36%;
+  top: 60px;
+  padding-bottom: 500px;
+  z-index: 0;
+}
+
+.creator{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer{
+  width:80px;
+  padding-left: 30px;
+  margin-right: 20px;
+}
+
+.channelImage{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.playlist-content ul{
+  list-style: none;
+  padding-right: 65px;
+}
+
+.video-list{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-list a{
+  z-index: 0;
+}
+
+.bars{
+  padding-left: 29px;
+  margin-right: 29px;
+}
+
+.video-thumbnail{
+  width: 120px;
+  margin-right: 10px;
+}
+
+
+.video-title{
+  font-weight: 500;
+  padding-top: 5px;
+  margin-bottom: 15px;
+}
+
+.video-creator{
+  font-size: 14px;
+  font-weight: 300;
+}

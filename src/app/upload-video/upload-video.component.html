@@ -1,0 +1,27 @@
+<div>
+  <h3>
+    Insert Video Details
+  </h3>
+  <div class="input-card">
+    <br>
+    <input [value]="(category)" (input)="category = $event.target.value" type="text"
+      placeholder="Insert Video Category Here!">
+    <br>
+    <input [value]="(title)" (input)="title = $event.target.value" type="text" placeholder="Insert Video Title Here!">
+    <br>
+    <input [value]="(description)" (input)="description = $event.target.value" type="text"
+      placeholder="Insert Video Description Here!">
+    <br>
+    <input [value]="(ageRestriction)" (input)="ageRestriction = $event.target.value" type="text"
+      placeholder="Is video age restricted?">
+    <br>
+    <input [value]="(private)" (input)="private = $event.target.value" type="text" placeholder="Is video private?">
+    <br>
+    <input [value]="(viewCount)" (input)="viewCount = $event.target.value" type="number"
+      placeholder="Insert Video View Count Here!">
+    <br>
+    <button (click)="insertVideo()">Insert</button>
+    <br>
+  </div>
+</div>
+<br>

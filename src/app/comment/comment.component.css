@@ -1,0 +1,8 @@
+.comment-desc{
+  padding-top: 10px;
+  list-style: none;
+}
+
+.comment-container{
+  display: flex;
+}

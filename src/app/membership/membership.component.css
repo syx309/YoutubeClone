@@ -1,0 +1,45 @@
+.homeBody{
+  font-family: 'Roboto',sans-serif;
+  margin-left: 76px;
+  padding-top: 69px;
+}
+
+.container{
+  margin-top: 5%;
+  margin-left: 22%;
+  width: 37%;
+}
+.title{
+  font-size: 18px;
+  padding-left: 9px;
+}
+.flex-container{
+  display: flex;
+  margin-top: 10px;
+}
+
+.offer-container{
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.offer-image{
+  width: 220px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.offer-desc{
+  margin-top: 4px;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: rgb(96, 96, 96);
+}
+
+.learn-more{
+  text-align: right;
+  font-weight: 500;
+  color: blue;
+}

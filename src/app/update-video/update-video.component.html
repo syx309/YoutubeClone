@@ -1,0 +1,31 @@
+<div>
+  <h1>{{this.video.id}}</h1>
+  <h1>{{video.category}}</h1>
+  <h1>{{video.title}}</h1>
+  <h1>{{video.description}}</h1>
+  <h1>{{video.ageRestriction}}</h1>
+  <h1>{{video.private}}</h1>
+
+  <h1>
+    Update Videos
+  </h1>
+  <div class="input-card">
+    <br>
+    <input [value]="(category)" (input)="category = $event.target.value" type="text"
+      placeholder="Insert Video Category Here!">
+    <br>
+    <input [value]="(title)" (input)="title = $event.target.value" type="text" placeholder="Insert Video Title Here!">
+    <br>
+    <input [value]="(description)" (input)="description = $event.target.value" type="text"
+      placeholder="Insert Video Description Here!">
+    <br>
+    <input [value]="(ageRestriction)" (input)="ageRestriction = $event.target.value" type="text"
+      placeholder="Is video age restricted?">
+    <br>
+    <input [value]="(private)" (input)="private = $event.target.value" type="text" placeholder="Is video private?">
+    <br>
+    <button (click)="updateVideo()">Update</button>
+    <br>
+  </div>
+</div>
+<br>

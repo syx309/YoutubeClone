@@ -1,0 +1,188 @@
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="section">
+    <a routerLink="/home">
+      <span style="width: 20%;"><i class="fas fa-home" style="font-size: 19px; color: white;"></i></span>
+      <span>Home</span>
+    </a>
+    <a routerLink="/trending">
+      <span style="width: 20%;"><i class="fab fa-hotjar" style="font-size: 19px; color: white;"></i></span>
+      <span>Trending</span>
+    </a>
+    <a routerLink="/subscription">
+      <span style="width: 20%;"><i class="far fa-images" style="font-size: 19px; color: white;"></i></span>
+      <span>Subscription</span>
+    </a>
+  </div>
+  <div class="section">
+    <a routerLink="/library">
+      <span style="width: 20%;"><i class="far fa-folder" style="font-size: 22px; color: white;"></i></span>
+      <span>Library</span>
+    </a>
+    <a routerLink="/history">
+      <span style="width: 20%;"><i class="fas fa-history" style="font-size: 22px; color: white;"></i></span>
+      <span>History</span>
+    </a>
+    <a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/channel/video">
+      <span style="width: 20%;"><i class="fab fa-youtube-square" style="font-size: 22px; color: white;"></i></span>
+      <span>Your Video</span>
+    </a>
+    <a routerLink="/home">
+      <span style="width: 20%;"><i class="far fa-clock" style="font-size: 22px; color: white;"></i></span>
+      <span>Watch Later</span>
+    </a>
+    <a routerLink="/home">
+      <span style="width: 20%;"><i class="fas fa-thumbs-up" style="font-size: 22px; color: white;"></i></span>
+      <span>Liked Videos</span>
+    </a>
+    <a routerLink="/user/kVuGeTZe32hWCpfyHww217IGLu33/playlists">
+      <span style="width: 20%;"><i class="fas fa-history" style="font-size: 22px; color: white;"></i></span>
+      <span>Playlist</span>
+    </a>
+  </div>
+  <div class="section">
+    <a routerLink="/home">
+      <span style="width: 20%;"><i class="fab fa-youtube" style="font-size: 22px; color: white;"></i></span>
+      <span>Youtube Premium</span>
+    </a>
+    <a href="/home/category/gaming">
+      <span style="width: 20%;"><i class="fas fa-headset" style="font-size: 22px; color: white;"></i></span>
+      <span>Gaming</span>
+    </a>
+    <a href="/home/category/music">
+      <span style="width: 20%;"><i class="fas fa-music" style="font-size: 22px; color: white;"></i></span>
+      <span>Music</span>
+    </a>
+    <a href="/home/category/food">
+      <span style="width: 20%;"><i class="fas fa-hamburger" style="font-size: 22px; color: white;"></i></span>
+      <span>Food</span>
+    </a>
+  </div>
+  <div class="extra-info">
+    <span>About</span>
+    <span>Press</span>
+    <span>Copyright</span>
+    <span>Contacts</span>
+    <span>Creators</span>
+    <span>Advertise</span>
+    <span>Developer</span>
+  </div>
+  <div class="copyright">
+    <span style="color: rgb(95, 90, 90); font-size:12px">@Alfred Soegiarto - syx309</span>
+  </div>
+</div>
+
+<nav>
+  <div style="left: 0px; display: flex; width: 20%;">
+    <i class="fas fa-bars" style="font-size:19px; color: white; padding-right: 16px;" (click)="openNav()"></i>
+    <a routerLink="/home">
+      <img src="../assets/yt_logo_rgb_dark.png" width="79px" height="19px">
+    </a>
+  </div>
+
+  <app-search class="search-bar"></app-search>
+
+  <ul class="nav-links">
+    <li>
+      <a routerLink="/uploader">
+        <div class="logo">
+          <i class="fas fa-video" style="margin-top: 6px; font-size: 19px; color: white;"></i>
+        </div>
+      </a>
+    </li>
+    <li>
+      <div class="logo">
+        <a href=""><i class="fas fa-th" style="margin-top: 6px; font-size: 19px; color: white;"></i></a>
+      </div>
+    </li>
+    <li>
+      <div class="logo">
+        <a href=""><i class="fas fa-bell" style="margin-top: 6px; font-size: 19px; color: white;"></i></a>
+      </div>
+    </li>
+    <li>
+      <div class="user-account" *ngIf="auth.user$ | async as user; else login">
+        <button (click)=toggleDropDown() (clickOutside)="onClickedOutside($event)" class="dropbtn">
+          <div class="dropdown">
+            <!-- <pre>{{ user | json}}</pre> -->
+            <img src="{{user.photoURL}}" width="30px" height="30px" style="border-radius: 25px;">
+            <!-- <button class="button button2" (click)="auth.signOut()">Sign Out</button> -->
+          </div>
+        </button>
+
+        <div *ngIf="showDropdown" class="dropdown-content">
+          <div class="section2">
+            <a href="/user/{{user.uid}}/channel/home">
+              <span style="width: 16%;"><i class="fas fa-home"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Your Channel</span>
+            </a>
+            <a href="/membership">
+              <span style="width: 16%;"><i class="fas fa-dollar-sign"
+                  style="font-size: 17px; color: white; opacity: 70%; padding-left: 13px"></i></span>
+              <span style="width: 80%;">Paid Memberships</span>
+            </a>
+            <a href="/subscription">
+              <span style="width: 16%;"><i class="fab fa-youtube"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Youtube Studio</span>
+            </a>
+            <a routerLink="/subscription">
+              <span style="width: 16%;"><i class="fas fa-user"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Switch Account</span>
+            </a>
+            <a routerLink="/subscription">
+              <span style="width: 16%;"><i class="fas fa-sign-out-alt"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <button style="color: white;" (click)="auth.signOut()">
+                <span style="width: 80%;">Sign Out</span>
+              </button>
+            </a>
+          </div>
+          <div class="section2">
+            <a href="/home">
+              <span style="width: 16%;"><i class="fas fa-adjust"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Dark Theme</span>
+            </a>
+            <a href="/home">
+              <span style="width: 16%;"><i class="fas fa-globe-americas"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Language</span>
+            </a>
+            <a routerLink="/home">
+              <span style="width: 16%;"><i class="fas fa-map-marker-alt"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Location</span>
+            </a>
+            <a routerLink="/home">
+              <span style="width: 16%;"><i class="fas fa-cog"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Settings</span>
+            </a>
+            <a routerLink="/home">
+              <span style="width: 16%;"><i class="fab fa-youtube-square"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Your Data in Youtube</span>
+            </a>
+            <a routerLink="/home">
+              <span style="width: 16%;"><i class="far fa-question-circle"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Help</span>
+            </a>
+            <a routerLink="/home">
+              <span style="width: 16%;"><i class="fas fa-comments"
+                  style="font-size: 17px; color: white; opacity: 70%;"></i></span>
+              <span style="width: 80%;">Send Feedback</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #login>
+        <button class="button button2" (click)="auth.googleSignin()">Sign In</button>
+      </ng-template>
+    </li>
+  </ul>
+</nav>

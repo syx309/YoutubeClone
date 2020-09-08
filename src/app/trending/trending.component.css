@@ -1,0 +1,64 @@
+.category{
+  font-family: 'Poppins',sans-serif;
+  margin-left: 76px;
+  padding-top: 69px;
+  padding-bottom: 16px;
+}
+
+.homeBody{
+  margin-left: 80px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  display: grid;
+  width: fit-content;
+  grid-template-columns: auto auto auto auto;
+  padding: 0;
+}
+
+.content{
+  width: 100%;
+  padding-bottom: 32px;
+  padding-right: 20px;
+}
+
+.content a{
+  text-decoration: none;
+  color: black;
+}
+
+.items{
+  width: 100%;
+}
+
+.videoThumbnail{
+  width: 273px;
+  padding-bottom: 10px;
+}
+
+.videoDetails{
+  display: flex;
+  align-items: center;
+  width: 273px;
+  height: 30px;
+  padding-bottom: 10px;
+}
+
+.imageContainer{
+  width:36px;
+  padding-right: 10px;
+}
+
+/* .titleContainer{
+  width: ;
+} */
+
+.channelImage{
+  width: 26px;
+  border-radius: 25px;
+}
+
+.videoDesc{
+  display: flex;
+}

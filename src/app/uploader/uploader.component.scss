@@ -1,0 +1,40 @@
+.container{
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  padding-top: 65px; 
+  padding-right: 10px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+.dropzone { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  min-width: 45vw;
+  font-weight: 200;
+  height: 280px;
+  border: 2px dashed #282828;
+  border-radius: 5px;
+  background: white;
+  margin: 10px;
+  
+  
+  &.hovering {
+      border: 2px solid black;
+      color: #dadada !important;
+  }
+
+  .file-label {
+      font-size: 1.2em;
+  }
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.1s ease;
+}
+
+img {
+  width: 250px
+}

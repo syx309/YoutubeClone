@@ -1,0 +1,11 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div>
+  <h2 class="category">{{ this.title }}</h2>
+  <div class="homeBody">
+    <div *ngFor="let video of videos, let i = index">
+      <app-video *ngIf="i<(lastKey)" [vid]="video"></app-video>
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>

@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="homeBody">
+  <div *ngIf="video" class="content">
+    <div class="video-content">
+      <div class="video-player">
+        <video class="item" controls>
+          <source src="{{video.video}}" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-title">
+        <h2>{{video.title}}</h2>
+      </div>
+      <div class="video-details">
+        <span><b>Views :</b> {{ video.viewCount }}</span>
+        <span style="padding-left:5px">• {{ video.uploadDate | date:'dd MMM yyyy' }}</span>
+        <span style="padding-left:170px"><b>Likes :</b> {{ video.likes }}</span>
+        <span style="padding-left:10px"><b>Dislikes :</b> {{video.dislikes}}</span>
+        <button style="margin-left: 15px;" (click)="addToPlaylist()">Add video to Playlist</button>
+      </div>
+
+      <div class="channel-details">
+        <div class="channel-image">
+
+        </div>
+        <div class="subscribe-button">
+
+        </div>
+      </div>
+
+      <h3 style="padding-top: 20px;">Comments: </h3>
+      <br>
+      <div class="add-comment" style="display: flex;">
+        <input [value]="(description)" (input)="description = $event.target.value" type="text"
+          placeholder="Insert Comments Here!">
+        <button (click)="insertComment()">Insert</button>
+      </div>
+      <br>
+      <div class="comment-section" *ngFor="let comment of comments" [comp]="comment">
+        <app-comment [com]="comment"></app-comment>
+      </div>
+    </div>
+
+    <div class="autoplay-video">
+      <h2>Up Next</h2>
+      <ul *ngFor="let item of videos" class="autoplay-list">
+        <div *ngIf=" item.id != this.temp">
+          <a href="/details/{{item.id}}">
+            <li>
+              <div class="autoplay-container">
+                <div class="autoplay-video-img-container">
+                  <img src="../../assets/cowboy bebop aesthethic.jpg" class="autoplay-video-img">
+                </div>
+                <div class="item-title-container">{{item.title}}</div>
+              </div>
+            </li>
+          </a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

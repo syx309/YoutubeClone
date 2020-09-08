@@ -1,0 +1,12 @@
+<ul class="comment-desc">
+  <li>
+    <p>{{comment.id}} | {{ comment.description }}</p>
+    <div class="add-comment" style="display: flex;">
+      <input [value]="(description)" (input)="description = $event.target.value" type="text"
+        placeholder="Update Comments Here!">
+      <button (click)="updateComment(comment.id)">Update</button>
+    </div>
+    <button (click)="deleteComment(comment.id)">Delete</button>
+  </li>
+  <br>
+</ul>

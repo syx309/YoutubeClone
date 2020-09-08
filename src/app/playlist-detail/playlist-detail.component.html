@@ -1,0 +1,39 @@
+<app-header></app-header>
+<app-sidebar></app-sidebar>
+<div class="homeBody" *ngIf="playlist">
+  <div class=" playlist-stat">
+    <div class="playlist-thumbnail">
+      <img src="../../assets/BikVcLY.jpg" width="375px">
+    </div>
+    <h2 class="playlist-title">{{playlist.name}}</h2>
+    <div class="desc">
+      <div class="items">{{result.length}} Videos</div>
+      <div class="items">Private</div>
+      <div class="items">Symbols</div>
+      <div class="items">No description</div>
+    </div>
+    <div class="creator">
+      <div class="imageContainer">
+        <img src="../../assets/girl_aesthethic.jpg" class="channelImage">
+      </div>
+      <p style="justify-content: center;">Alfred Soegiarto</p>
+    </div>
+  </div>
+  <div class="playlist-content">
+    <h4 style="padding-top: 15px; padding-left: 30px; opacity: 75%; margin-bottom: 20px;">Videos</h4>
+    <ul *ngFor="let video of videos">
+      <li class="video-list">
+        <div class="bars"><i class="fas fa-bars"></i></div>
+        <a routerLink="/details/{{video.id}}">
+          <div class="video-thumbnail">
+            <img src="{{ video.thumbnail }}" style="width: 100%;">
+          </div>
+        </a>
+        <div class="video-desc">
+          <div class="video-title">{{ video.title }}</div>
+          <div class="video-creator"><span>Creator: </span>{{ video.userId }}</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

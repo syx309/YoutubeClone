@@ -42,13 +42,7 @@ import { UploaderComponent } from './uploader/uploader.component';
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDKD3tU-4nhZuc3NCJm7k4T4SjdXwpMw-4",
-  authDomain: "clone-715b2.firebaseapp.com",
-  databaseURL: "https://clone-715b2.firebaseio.com",
-  projectId: "clone-715b2",
-  storageBucket: "clone-715b2.appspot.com",
-  messagingSenderId: "712030248076",
-  appId: "1:712030248076:web:b64b9519a33f94adb16fa9"
+  //please fill this with your firebase database config
 };
 
 @NgModule({

@@ -1,6 +1,6 @@
 # YoutubeClone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+This project was created because I want to learn more about angular dan graphql, i created this project in one and a half week so the front-end design is pretty bad, but the overall functionality is there
 
 # HomePage
 
